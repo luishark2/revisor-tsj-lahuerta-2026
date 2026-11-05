@@ -43,7 +43,7 @@ Desarrollar y publicar una aplicación web con un asistente de Inteligencia Arti
 | **Alojamiento** | Azure App Service (Plan gratuito para estudiantes, región West US). |
 
 **Flujo:** 
-![Flujo](assets/Flujo.png)
+![Flujo](./assets/Flujo.png)
 
 ## 4. Alcance real del componente inteligente
 El asistente no califica ni reescribe el informe completo automáticamente. Su alcance real es actuar como un **tutor de formato**. Utiliza una arquitectura RAG para buscar reglas específicas en los manuales cargados y compararlas con el fragmento que el usuario proporciona. La lógica de respuesta está gobernada por un *System Prompt* estricto que le obliga a citar la página exacta del manual, rechazar fragmentos demasiado cortos y proteger la privacidad de los datos, evitando alucinaciones.
