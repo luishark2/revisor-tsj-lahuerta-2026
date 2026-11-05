@@ -43,7 +43,7 @@ Desarrollar y publicar una aplicación web con un asistente de Inteligencia Arti
 | **Alojamiento** | Azure App Service (Plan gratuito para estudiantes, región West US). |
 
 **Flujo:** 
-![Flujo](assets/Flujo.png)
+![Flujo](Flujo.png)
 
 ## 4. Alcance real del componente inteligente
 El asistente no califica ni reescribe el informe completo automáticamente. Su alcance real es actuar como un **tutor de formato**. Utiliza una arquitectura RAG para buscar reglas específicas en los manuales cargados y compararlas con el fragmento que el usuario proporciona. La lógica de respuesta está gobernada por un *System Prompt* estricto que le obliga a citar la página exacta del manual, rechazar fragmentos demasiado cortos y proteger la privacidad de los datos, evitando alucinaciones.
@@ -52,7 +52,7 @@ El asistente no califica ni reescribe el informe completo automáticamente. Su a
 En la aplicación publicada, el usuario puede interactuar mediante un chat y obtener respuestas que demuestran los 6 principios de IA Responsable de Microsoft:
 
 **Ilustración 1. Interfaz principal de la aplicación web publicada**
-![Interfaz de la aplicación web](assets/figura1-interfaz-app.png)
+![Interfaz de la aplicación web](figura1-interfaz-app.png)
 
 *Nota.* Pantalla de inicio del asistente Revisor-TSJ accesible desde la URL pública 
 https://revisor-tsj-lahuerta-2026-g0d9htbhhcbnbzh9.westus-01.azurewebsites.net/. 
@@ -61,7 +61,7 @@ El estudiante puede iniciar la revisión inmediatamente sin necesidad de login.
 1. **Transparencia:** Al revisar una cita, el agente responde: *"Cumple: Uso correcto de apellido... Manual p. 21-22"*.
 **Ilustración 2. Revisión de cita APA 7 con citación de página del Manual**
 
-![Revisión de cita Bernal](assets/figura2-revision-cita.png)
+![Revisión de cita Bernal](figura2-revision-cita.png)
 
 *Nota.* El asistente revisa la cita "(Bernal, 2006, p.55)" y responde citando 
 las páginas 21-22 del Manual de Estilo del TSJ. Demuestra el principio de 
@@ -70,7 +70,7 @@ las páginas 21-22 del Manual de Estilo del TSJ. Demuestra el principio de
 2. **Confiabilidad:** Si el usuario escribe *"El proyecto es importante"*, el agente responde: *"Necesito más contexto, comparte al menos un párrafo completo"* (evitando inventar una corrección).
 **Ilustración 3. Rechazo de evaluación por fragmento insuficiente**
 
-![Fragmento corto](assets/figura3-fragmento-corto.png)
+![Fragmento corto](figura3-fragmento-corto.png)
 
 *Nota.* Ante el texto "El proyecto es importante.", el asistente aplica el principio 
 de **Confiabilidad y Seguridad**: rechaza evaluar algo ambiguo.
@@ -78,7 +78,7 @@ de **Confiabilidad y Seguridad**: rechaza evaluar algo ambiguo.
 3. **Privacidad:** Si se pregunta *"¿Cuánto sacó Juan Pérez?"*, el agente se niega a responder, protegiendo datos sensibles.
 **Ilustración 4. Protección de información personal de estudiantes**
 
-![Privacidad de datos](assets/figura4-privacidad.png)
+![Privacidad de datos](figura4-privacidad.png)
 
 *Nota.* Cuando se pregunta por la calificación de "Juan Pérez", el asistente 
 aplica el principio de **Privacidad y Seguridad**.
@@ -103,14 +103,14 @@ El prototipo se diseñó y configuró directamente en **Microsoft Azure AI Found
 5. Para el despliegue, se utilizó la función nativa de Foundry "Publicar como aplicación web", vinculándola a la suscripción *Azure for Students* en la región *West US*, lo que generó la URL pública final sin necesidad de configurar servidores Node.js o contenedores manualmente.
 **Ilustración 5. Configuración del agente en Microsoft Azure AI Foundry**
 
-![Agente en Foundry](assets/figura5-foundry.png)
+![Agente en Foundry](figura5-foundry.png)
 
 *Nota.* Pantalla de configuración del agente `Revisor-TSJ-Minimal-AgentIdentity` 
 en Azure AI Foundry.
 
 **Ilustración 6. Repositorio de código en GitHub**
 
-![Repositorio GitHub](assets/figura6-github.png)
+![Repositorio GitHub](figura6-github.png)
 
 *Nota.* Repositorio https://github.com/luishark2/revisor-tsj-lahuerta-2026 con el 
 código de la aplicación web y documentación.
